@@ -1,0 +1,72 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\ConsoleApp\\ConsoleApp.csproj",
+    "projectName": "ConsoleApp",
+    "projectPath": "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\ConsoleApp\\ConsoleApp.csproj",
+    "outputPath": "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\ConsoleApp\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {
+          "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\DAL\\DAL.csproj": {
+            "projectPath": "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\DAL\\DAL.csproj"
+          },
+          "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\GameSystem\\GameSystem.csproj": {
+            "projectPath": "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\GameSystem\\GameSystem.csproj"
+          },
+          "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\GameUI\\GameUI.csproj": {
+            "projectPath": "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\GameUI\\GameUI.csproj"
+          },
+          "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\MenuSystem\\MenuSystem.csproj": {
+            "projectPath": "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\MenuSystem\\MenuSystem.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "Microsoft.EntityFrameworkCore.Design": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.EntityFrameworkCore.SqlServer": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+          "target": "Package",
+          "version": "[2.0.3, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        },
+        "MySql.Data.EntityFrameworkCore": {
+          "target": "Package",
+          "version": "[8.0.13, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

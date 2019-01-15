@@ -1,0 +1,12 @@
+C:\Users\kalle\RiderProjects\BattleShipGame\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+C:\Users\kalle\RiderProjects\BattleShipGame\DAL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\kalle\RiderProjects\BattleShipGame\DAL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\kalle\RiderProjects\BattleShipGame\DAL\bin\Debug\netstandard2.0\Domain.dll
+C:\Users\kalle\RiderProjects\BattleShipGame\DAL\bin\Debug\netstandard2.0\Domain.pdb
+C:\Users\kalle\RiderProjects\BattleShipGame\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+C:\Users\kalle\RiderProjects\BattleShipGame\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\kalle\RiderProjects\BattleShipGame\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+C:\Users\kalle\RiderProjects\BattleShipGame\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+C:\Users\kalle\RiderProjects\BattleShipGame\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+C:\Users\kalle\RiderProjects\BattleShipGame\DAL\obj\Debug\netstandard2.0\DAL.dll
+C:\Users\kalle\RiderProjects\BattleShipGame\DAL\obj\Debug\netstandard2.0\DAL.pdb

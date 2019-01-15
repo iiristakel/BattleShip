@@ -1,0 +1,8 @@
+C:\Users\kalle\RiderProjects\BattleShipGame\GameBrain\bin\Debug\netstandard2.0\GameBrain.deps.json
+C:\Users\kalle\RiderProjects\BattleShipGame\GameBrain\bin\Debug\netstandard2.0\GameBrain.dll
+C:\Users\kalle\RiderProjects\BattleShipGame\GameBrain\bin\Debug\netstandard2.0\GameBrain.pdb
+C:\Users\kalle\RiderProjects\BattleShipGame\GameBrain\obj\Debug\netstandard2.0\GameBrain.csproj.CoreCompileInputs.cache
+C:\Users\kalle\RiderProjects\BattleShipGame\GameBrain\obj\Debug\netstandard2.0\GameBrain.AssemblyInfoInputs.cache
+C:\Users\kalle\RiderProjects\BattleShipGame\GameBrain\obj\Debug\netstandard2.0\GameBrain.AssemblyInfo.cs
+C:\Users\kalle\RiderProjects\BattleShipGame\GameBrain\obj\Debug\netstandard2.0\GameBrain.dll
+C:\Users\kalle\RiderProjects\BattleShipGame\GameBrain\obj\Debug\netstandard2.0\GameBrain.pdb

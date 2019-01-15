@@ -1,0 +1,9 @@
+C:\Users\kalle\RiderProjects\BattleShipGame\MenuSystem\bin\Debug\netstandard2.0\MenuSystem.deps.json
+C:\Users\kalle\RiderProjects\BattleShipGame\MenuSystem\bin\Debug\netstandard2.0\MenuSystem.dll
+C:\Users\kalle\RiderProjects\BattleShipGame\MenuSystem\bin\Debug\netstandard2.0\MenuSystem.pdb
+C:\Users\kalle\RiderProjects\BattleShipGame\MenuSystem\obj\Debug\netstandard2.0\MenuSystem.csprojAssemblyReference.cache
+C:\Users\kalle\RiderProjects\BattleShipGame\MenuSystem\obj\Debug\netstandard2.0\MenuSystem.csproj.CoreCompileInputs.cache
+C:\Users\kalle\RiderProjects\BattleShipGame\MenuSystem\obj\Debug\netstandard2.0\MenuSystem.AssemblyInfoInputs.cache
+C:\Users\kalle\RiderProjects\BattleShipGame\MenuSystem\obj\Debug\netstandard2.0\MenuSystem.AssemblyInfo.cs
+C:\Users\kalle\RiderProjects\BattleShipGame\MenuSystem\obj\Debug\netstandard2.0\MenuSystem.dll
+C:\Users\kalle\RiderProjects\BattleShipGame\MenuSystem\obj\Debug\netstandard2.0\MenuSystem.pdb
