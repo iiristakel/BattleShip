@@ -1,6 +1,6 @@
 namespace Domain
 {
-    public enum CellState
+    /*public enum CellState
     {
         Empty,
         Carrier,
@@ -9,8 +9,6 @@ namespace Domain
         Cruiser,
         Patrol,
         Miss,
-        Hit,
-        Sunk,
-        NotAvailable
-    }
+        Hit
+    }*/
 }

@@ -1,10 +1,27 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Welcome";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h2>Welcome to Battleship game!</h2>
+<div>
+    <form method="post" class="setup">
+        
+        <br/>
+        <input name="submit" type="submit" class="btn" value="New Game" id="NewGame"/>
+        <br/>
+        <br/>
+        <input name="submit" type="submit" class="btn" value="Load Game" id="LoadGame"/>
+        <br/>
+        <br/>
+        <input name="submit" type="submit" class="btn" value="Saves" id="Saves"/>
+        <br/>
+        <br/>
+        <input name="submit" type="submit" class="btn" value="Exit" id="Exit"/>
+    </form>
 </div>
+
+@section scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

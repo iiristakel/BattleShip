@@ -14,20 +14,11 @@ namespace Domain
         [MaxLength (30)]
         public string Name { get; set; }
 
-        [InverseProperty("PlayerOne")] 
-        public List<Game> PlayerOneGames { get; set; } = new List<Game>();
-
-        [InverseProperty("PlayerTwo")] 
-        public List<Game> PlayerTwoGames { get; set; } = new List<Game>();
-
-        //public int GameBoardId { get; set; }
         public GameBoard GameBoard { get; set; }
 
-        //public int FiringBoardId { get; set; }
         public GameBoard FiringBoard { get; set; }
 
-        public List<Ship> Ships { get; set; } =
-            new List<Ship>(); //list of player ships, if they're all sunk, player has lost the game
+        public List<Ship> Ships { get; set; } = new List<Ship>(); 
 
         public bool HasLost
         {
@@ -36,6 +27,10 @@ namespace Domain
             }
         }
 
+        public Player()
+        {
+            
+        }
         //constructor
         public Player(string name)
         {

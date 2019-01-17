@@ -1,0 +1,61 @@
+@page
+@model WebApp.Pages.NewGameSetupModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Starting options</h2>
+
+<form method="post" class="setup">
+    
+    <tr>
+        <td>
+            1.player name: <input asp-for="PlayerOneName"/>
+            <span asp-validation-for="PlayerOneName"></span> 
+            <br/>
+            2.player name: <input asp-for="PlayerTwoName"/>
+            <span asp-validation-for="PlayerTwoName"></span> 
+            <br/>
+            Board Width[5-26]: <input asp-for="BoardWidth" value="10"/>
+            <span asp-validation-for="BoardWidth"></span>
+            <br/>
+            Board Height[5-15]: <input asp-for="BoardHeight" value="10"/>
+            <span asp-validation-for="BoardHeight"></span>
+            <br/>
+            Carrier[Size 1x5] amount[0-5]: <input asp-for="CarrierAmount" value="1"/>
+            <span asp-validation-for="CarrierAmount"></span>
+            <br/>
+            Battleship[Size 1x4] amount[0-5]: <input asp-for="BattleshipAmount" value="1"/>
+            <span asp-validation-for="BattleshipAmount"></span>
+            <br/>
+            Submarine[Size 1x3] amount[0-5]: <input asp-for="SubmarineAmount" value="1"/>
+            <span asp-validation-for="SubmarineAmount"></span>
+            <br/>
+            Cruiser[Size 1x2] amount[0-5]: <input asp-for="CruiserAmount" value="1"/>
+            <span asp-validation-for="CruiserAmount"></span>
+            <br/>
+            Patrol[Size 1x1] amount[0-5]: <input asp-for="PatrolAmount" value="1"/>
+            <span asp-validation-for="PatrolAmount"></span>
+            <br/>
+
+        </td>
+    </tr>
+    
+    <div>
+        <br/>
+        <input name="submit" type="submit" class="btn" value="Generate random board" id="RandomBoard"/>
+        <br/>
+        <br/>
+        <input name="submit" type="submit" class="btn" value="Custom ship placement" id="CustomBoard"/>
+        <br/>
+        <br/>
+        <input name="submit" type="submit" class="btn" value="Back to main menu" id="MainMenu"/>
+    </div>
+</form>
+
+
+@section scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

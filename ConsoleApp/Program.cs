@@ -23,11 +23,11 @@ namespace ConsoleApp
             var menuItemLoadGame = ApplicationMenu.MainMenu.MenuItems.First(m => m.Value.LongDescription == "Load game");
             menuItemLoadGame.Value.CommandToExecute = gameUi.LoadGame; 
             
-            //var menuItemStartShooting = ApplicationMenu.GameMenu.MenuItems.First(m => m.Value.LongDescription == "Start shooting");
-           // menuItemStartShooting.Value.CommandToExecute = gameUi.StartShooting;
+            var menuItemStartShooting = ApplicationMenu.GameMenu.MenuItems.First(m => m.Value.LongDescription == "Start shooting");
+           menuItemStartShooting.Value.CommandToExecute = gameUi.Shooting;
             
-            //var menuItemSaveGame = ApplicationMenu.GameMenu.MenuItems.First(m => m.Value.LongDescription == "Save game");
-            //menuItemSaveGame.Value.CommandToExecute = gameUi.SaveGame;
+            var menuItemSaveGame = ApplicationMenu.GameMenu.MenuItems.First(m => m.Value.LongDescription == "Save game");
+            menuItemSaveGame.Value.CommandToExecute = gameUi.SaveGame;
             
             var menuItemSaveInGame = ApplicationMenu.InGameMenu.MenuItems.First(m => m.Value.LongDescription == "Save game");
             menuItemSaveInGame.Value.CommandToExecute = gameUi.SaveGame;

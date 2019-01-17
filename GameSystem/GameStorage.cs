@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using DAL;
 using Domain;
 using MenuSystem;
@@ -8,47 +9,68 @@ namespace GameSystem
 {
     public class GameStorage
     {
-        public AppDbContext context = new AppDbContext();
-        private Game game;
+        public static AppDbContext context = new AppDbContext();
         
-        
-        public GameStorage()
-        {
-            
-        }
 
-        public string SaveGame(string command/*Game game, bool userSave = false*/)
+        public static int Save(Game game)
         {
+           
             if (context.Games.Find(game.GameId) == null)
             {
                 context.Games.Add(game);
             }
             else
             {
-                //game.SavedGame = userSave ? 1 : 0;
                 context.Games.Update(game);
+                
             }
 
             context.SaveChanges();
-            Console.WriteLine("Game saved!");
-            return ApplicationMenu.MainMenu.RunMenu();
+            return game.GameId;
         }
 
-
-        /*
-         * Get games from DB.
-         */
-        public DbSet<Game> GetGames()
+        public static Game Load(int index)
         {
-            return context.Games;
-        }
+            
+            
+            var game = context.Games
+                 .Where(g=>g.GameId == index)
+                .Include(g => g.PlayerOne)
+                .ThenInclude(f => f.GameBoard)
+                .Include(g => g.PlayerOne)
+                .ThenInclude(f => f.FiringBoard)
+                .Include(g => g.PlayerTwo)
+                .ThenInclude(f => f.GameBoard)
+                .Include(g => g.PlayerOne)
+                .ThenInclude(f => f.Ships)
+                .Include(g => g.PlayerTwo)
+                .ThenInclude(f => f.Ships)
+                .Include(g => g.PlayerTwo)
+                .ThenInclude(f => f.FiringBoard)
+                .Include(g=>g.Turn)
+                .Include(g=>g.Winner)
+                .AsQueryable()
+                .FirstOrDefault();
 
-        /*
-         * Return players from database.
-         */
-        public DbSet<Player> GetPlayers()
-        {
-            return context.Players;
+            /*game.PlayerOne.GameBoard = context.GameBoards.Where(c => c.PlayerId == game.PlayerOne.PlayerId)
+                .Include(a => a.Board).ThenInclude(b => b.Row).First();
+            
+            game.PlayerTwo.GameBoard = context.GameBoards.Where(c => c.PlayerId == game.PlayerTwo.PlayerId)
+                .Include(a => a.Board).ThenInclude(b => b.Row).First();
+
+*/
+                /*foreach (BoardRow row in game.PlayerOne.GameBoard.Board
+                    .Where(a=>a.GameBoardId == game.PlayerOne.GameBoard.GameBoardId))
+                {
+                    foreach (Cell cell in row.Row)
+                    {
+                        cell.CellStatus = row.Row.First(a => a.BoardRowId == cell.BoardRowId).CellStatus;
+                    }
+                }*/
+            
+
+            
+            return game;
         }
     }
 }

@@ -5306,6 +5306,46 @@
         "runtime": {
           "bin/placeholder/Domain.dll": {}
         }
+      },
+      "GameSystem/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "MenuSystem": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameSystem.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameSystem.dll": {}
+        }
+      },
+      "GameUI/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DAL": "1.0.0",
+          "Domain": "1.0.0",
+          "GameSystem": "1.0.0",
+          "MenuSystem": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameUI.dll": {}
+        }
+      },
+      "MenuSystem/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MenuSystem.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MenuSystem.dll": {}
+        }
       }
     }
   },
@@ -14287,11 +14327,28 @@
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "GameSystem/1.0.0": {
+      "type": "project",
+      "path": "../GameSystem/GameSystem.csproj",
+      "msbuildProject": "../GameSystem/GameSystem.csproj"
+    },
+    "GameUI/1.0.0": {
+      "type": "project",
+      "path": "../GameUI/GameUI.csproj",
+      "msbuildProject": "../GameUI/GameUI.csproj"
+    },
+    "MenuSystem/1.0.0": {
+      "type": "project",
+      "path": "../MenuSystem/MenuSystem.csproj",
+      "msbuildProject": "../MenuSystem/MenuSystem.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "DAL >= 1.0.0",
+      "GameSystem >= 1.0.0",
+      "GameUI >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -14332,6 +14389,12 @@
           "projectReferences": {
             "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\DAL\\DAL.csproj": {
               "projectPath": "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\DAL\\DAL.csproj"
+            },
+            "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\GameSystem\\GameSystem.csproj": {
+              "projectPath": "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\GameSystem\\GameSystem.csproj"
+            },
+            "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\GameUI\\GameUI.csproj": {
+              "projectPath": "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\GameUI\\GameUI.csproj"
             }
           }
         }

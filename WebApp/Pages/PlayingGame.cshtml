@@ -1,0 +1,147 @@
+@page
+@using Domain
+@using GameSystem
+@using GameUI
+@model PlayingGameModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>@Model.Player.Name, it is your turn</h2>
+
+<form method="post">
+    <div class="float-left">
+        GameBoard:
+        <table >
+            <tr>
+                <br/>
+                @for (var i = 0; i < RuleSet.BoardWidth; i++)
+                {
+                    if (i == 0)
+                    {
+                        <td> </td>
+                    }
+                    <td class="">@i</td>
+                }
+            </tr>
+            @for (var i = 0; i < RuleSet.BoardHeight; i++)
+            {
+                <tr>
+                    <td class="">
+                        @i
+                    </td>
+                    @for (var j = 0; j < @RuleSet.BoardWidth; j++)
+                    {
+                        var symbol = MainSystem.GetBoardSquareStateSymbol(@Model.Player.GameBoard.Board[i].Row[j].CellStatus);
+                        if (Model.Player.GameBoard.Board[i].Row[j].CellStatus == Cell.CellState.Empty)
+                        {
+                            <td>
+                                <svg width="20" height="20">
+                                    <rect rx="4" ry="4" width="15" height="15" style="fill: rgb(0, 70, 250); stroke-width: 2; stroke: rgb(0, 0, 0)"/>
+                                </svg>
+                            </td>
+                        }
+                        else
+                        {
+                            <td >@symbol</td>
+                        }
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="float-right">
+        FiringBoard:
+        <table >
+            <tr>
+                <br/>
+                @for (var i = 0; i < RuleSet.BoardWidth; i++)
+                {
+                    if (i == 0)
+                    {
+                        <td> </td>
+                    }
+                    <td class="">@i</td>
+                }
+            </tr>
+            @for (var i = 0; i < RuleSet.BoardHeight; i++)
+            {
+                <tr>
+                    <td class="">
+                        @i
+                    </td>
+                    @for (var j = 0; j < @RuleSet.BoardWidth; j++)
+                    {
+                        var symbol = MainSystem.GetBoardSquareStateSymbol(@Model.Player.FiringBoard.Board[i].Row[j].CellStatus);
+                        if (Model.Player.FiringBoard.Board[i].Row[j].CellStatus == Cell.CellState.Empty)
+                        {
+                            <td>
+                                <svg width="20" height="20">
+                                    <rect rx="4" ry="4" width="15" height="15" style="fill: rgb(0, 70, 250); stroke-width: 2; stroke: rgb(0, 0, 0)"/>
+                                </svg>
+                            </td>
+                        }
+                        else
+                        {
+                            <td >@symbol</td>
+                        }
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+
+    <span>
+    <div>
+        @if (Model.Move == false)
+        {
+            @Model.Message
+            <br/>
+            <input type="submit" name="submit" class="btn" value="Continue" id="Continue"/>
+        }
+
+        @if (!Model.GameWon && @Model.Move)
+        {
+            <tr>Enter shooting coordinates.</tr>
+            <br/>
+            <tabel>
+                <tr>
+                    <td>
+                        X Coord: <input asp-for="XCord"/>
+                        <span asp-validation-for="XCord"></span>
+                        <br/>
+                        Y Coord: <input asp-for="YCord"/>
+                        <span asp-validation-for="YCord"></span>
+                        <br/>
+
+                        <input type="submit" name="submit" class="btn" value="Shoot" id="Shoot"/>
+                    </td>
+                </tr>
+            </tabel>
+        }
+        else if (Model.GameWon)
+        {
+            <br/>
+            <div>
+                <span id="winner"> @Model.Player.Name, you won! </span>
+            </div>
+        }
+    </div>
+
+    <tr>
+        <input type="submit" name="submit" class="btn" value="Save Game" id="SaveGame"/>
+    </tr>
+
+    <tr>
+        <input type="submit" name="submit" class="btn" value="Back to main menu" id="BackToMain"/>
+    </tr>
+
+    <input type="hidden" asp-for="Index" value="@Model.Index"/>
+    </span>
+</form>
+
+@section scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

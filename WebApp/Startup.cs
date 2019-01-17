@@ -34,9 +34,9 @@ namespace WebApp
             });
 
 
-            /*services.AddDbContext<AppDbContext>(
+            services.AddDbContext<AppDbContext>(
                 options => options.UseMySQL(
-                    Configuration.GetConnectionString("DefaultConnection")));*/
+                    Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

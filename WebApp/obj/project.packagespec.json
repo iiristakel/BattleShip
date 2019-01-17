@@ -17,6 +17,12 @@
         "projectReferences": {
           "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\DAL\\DAL.csproj": {
             "projectPath": "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\DAL\\DAL.csproj"
+          },
+          "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\GameSystem\\GameSystem.csproj": {
+            "projectPath": "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\GameSystem\\GameSystem.csproj"
+          },
+          "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\GameUI\\GameUI.csproj": {
+            "projectPath": "C:\\Users\\kalle\\RiderProjects\\BattleShipGame\\GameUI\\GameUI.csproj"
           }
         }
       }

@@ -1,0 +1,24 @@
+@page
+@model SavedGameChoiceModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div>
+    <form method="post" class="setup">
+        
+        Enter GameId you want to play: 
+        @*@Model.context.Games.First().GameId - @Model.context.Games.Last().GameId*@
+        <input asp-for="Index"/>
+        <span asp-validation-for="Index"></span> 
+        <br/>
+        <input name="submit" type="submit" class="btn" value="Load Game" id="LoadGame"/>
+        <br/>
+    </form>
+</div>
+
+@section scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

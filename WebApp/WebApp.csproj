@@ -17,10 +17,12 @@
 
     <ItemGroup>
       <ProjectReference Include="..\DAL\DAL.csproj" />
+      <ProjectReference Include="..\GameSystem\GameSystem.csproj" />
+      <ProjectReference Include="..\GameUI\GameUI.csproj" />
     </ItemGroup>
     
     <ItemGroup>
-        <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4"/>
+        <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
     </ItemGroup>
 
 

@@ -25,6 +25,8 @@
       "WebApp/1.0.0": {
         "dependencies": {
           "DAL": "1.0.0",
+          "GameSystem": "1.0.0",
+          "GameUI": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
@@ -1040,6 +1042,40 @@
         },
         "compile": {
           "Domain.dll": {}
+        }
+      },
+      "GameSystem/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0",
+          "MenuSystem": "1.0.0"
+        },
+        "runtime": {
+          "GameSystem.dll": {}
+        },
+        "compile": {
+          "GameSystem.dll": {}
+        }
+      },
+      "GameUI/1.0.0": {
+        "dependencies": {
+          "DAL": "1.0.0",
+          "Domain": "1.0.0",
+          "GameSystem": "1.0.0",
+          "MenuSystem": "1.0.0"
+        },
+        "runtime": {
+          "GameUI.dll": {}
+        },
+        "compile": {
+          "GameUI.dll": {}
+        }
+      },
+      "MenuSystem/1.0.0": {
+        "runtime": {
+          "MenuSystem.dll": {}
+        },
+        "compile": {
+          "MenuSystem.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -4415,6 +4451,21 @@
       "sha512": ""
     },
     "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameSystem/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MenuSystem/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

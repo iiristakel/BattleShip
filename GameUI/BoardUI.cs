@@ -8,7 +8,6 @@ namespace GameUI
 {
     public class BoardUI
     {
-        
         public string GetBoardString(GameBoard gameBoard)
         {
             String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -52,7 +51,7 @@ namespace GameUI
             var sb = new StringBuilder();
             foreach (var cell in boardRow)
             {
-                sb.Append("| " + GetBoardSquareStateSymbol(cell.CellStatus) + " ");
+                sb.Append("| " + GameSystem.MainSystem.GetBoardSquareStateSymbol(cell.CellStatus) + " ");
             }
 
 
@@ -60,22 +59,21 @@ namespace GameUI
             return sb.ToString();
         }
 
-        public string GetBoardSquareStateSymbol(CellState state)
+        /*public string GetBoardSquareStateSymbol(Cell.CellState state)
         {
             switch (state)
             {
-                case CellState.Empty: return " ";
-                case CellState.Patrol: return "P";
-                case CellState.Cruiser: return "C";
-                case CellState.Carrier: return "A";
-                case CellState.Submarine: return "S";
-                case CellState.Battleship: return "B";
-                case CellState.Sunk: return "X";
-                case CellState.Miss: return "M";
-                case CellState.Hit: return "H";
+                case Cell.CellState.Empty: return " ";
+                case Cell.CellState.Patrol: return "P";
+                case Cell.CellState.Cruiser: return "C";
+                case Cell.CellState.Carrier: return "A";
+                case Cell.CellState.Submarine: return "S";
+                case Cell.CellState.Battleship: return "B";
+                case Cell.CellState.Miss: return "M";
+                case Cell.CellState.Hit: return "H";
                 default:
                     throw new InvalidEnumArgumentException("Unsupported enum value found!");
             }
-        }
+        }*/
     }
 }

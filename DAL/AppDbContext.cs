@@ -14,11 +14,14 @@ namespace DAL
         public DbSet<Ship> Ships { get; set; }
         public DbSet<BoardRow> BoardRows { get; set; }
         public DbSet<Cell> Cells { get; set; }
+
+        public AppDbContext(){}
         
-        //public AppDbContext(DbContextOptions<AppDbContext> options) : base(options){ }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options){ }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            
             base.OnConfiguring(optionsBuilder);
             optionsBuilder
                 .UseMySQL("server=alpha.akaver.com;" +
@@ -58,7 +61,7 @@ namespace DAL
                 .HasOne(x => x.PlayerTwo);
             
 
-
+            base.OnModelCreating(modelBuilder);
         }
         
         class BoolToIntConverter : ValueConverter<bool, int> {

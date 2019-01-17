@@ -1,17 +1,23 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Domain
 {
     public class Ship
     {
+        [Key]
         public int ShipId { get; set; }
         
-        //public int PlayerId { get; set; }
-        //public Player Player { get; set; }
+        [ForeignKey("Player")]
+        public int PlayerId { get; set; }
+        public Player Player { get; set; }
         
         public string Name { get; set; }
         public int Width { get; set; }
         public int Hits { get; set; } = 0;
-        public CellState CellState { get; set; }
+        public Cell.CellState CellState { get; set; }
         public bool IsSunk => Hits >= Width;
+        public bool IsPlaced { get; set; } = false;
     }
     
     public class Patrol : Ship
@@ -20,7 +26,7 @@ namespace Domain
         {
             Name = "Patrol";
             Width = 1;
-            CellState = CellState.Patrol;
+            CellState = Cell.CellState.Patrol;
         }
     }
 
@@ -30,7 +36,7 @@ namespace Domain
         {
             Name = "Cruiser";
             Width = 2;
-            CellState = CellState.Cruiser;
+            CellState = Cell.CellState.Cruiser;
         }
     }
 
@@ -40,7 +46,7 @@ namespace Domain
         {
             Name = "Submarine";
             Width = 3;
-            CellState = CellState.Submarine;
+            CellState = Cell.CellState.Submarine;
         }
     }
 
@@ -50,7 +56,7 @@ namespace Domain
         {
             Name = "Battleship";
             Width = 4;
-            CellState = CellState.Battleship;
+            CellState = Cell.CellState.Battleship;
         }
     }
 
@@ -60,7 +66,7 @@ namespace Domain
         {
             Name = "Carrier";
             Width = 5;
-            CellState = CellState.Carrier;
+            CellState = Cell.CellState.Carrier;
         }
     }
 }

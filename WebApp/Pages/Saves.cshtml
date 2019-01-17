@@ -1,0 +1,59 @@
+@page
+@model WebApp.Pages.SavesModel
+
+@{
+    ViewData["Title"] = "Saved games";
+}
+
+<h2>Saved Games</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Game[0].GameId)
+        </th>
+        <th>
+            PlayerOne name
+        </th>
+        <th>
+            PlayerTwo name
+        </th>
+        <th>
+            Finished
+        </th>
+        <th>
+            Winner
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Game)
+    {
+        var finished = "Yes";
+        if (item.Winner == null)
+        {
+            finished = "No";
+        }
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlayerOne.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlayerTwo.Name)
+            </td>
+            <td>
+                @finished
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Winner.Name)
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
